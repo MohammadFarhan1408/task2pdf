@@ -83,7 +83,7 @@ const EconomicImpactForm = ({
               Return on Investment (%)
             </label>
             <input
-              type="number"
+              type="text"
               id="roi"
               value={roi}
               onChange={(e) => updateEconomicImpact("roi", e.target.value)}
