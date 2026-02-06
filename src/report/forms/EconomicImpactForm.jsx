@@ -68,7 +68,7 @@ const EconomicImpactForm = ({
               Cost Per Beneficiary
             </label>
             <input
-              type="number"
+              type="text"
               id="costPerBeneficiary"
               value={costPerBeneficiary}
               onChange={(e) =>
