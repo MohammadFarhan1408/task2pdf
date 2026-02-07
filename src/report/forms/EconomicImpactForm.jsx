@@ -2,6 +2,14 @@ import React from "react";
 import { useReportStore } from "@/store/reportStore";
 import FormNavigation from "./components/FormNavigation";
 
+function normalizeNumber(value) {
+  if (value === "" || value === null || value === undefined) {
+    return null;
+  }
+  const n = Number(value);
+  return Number.isFinite(n) ? n : null;
+}
+
 const EconomicImpactForm = ({
   nextStep,
   prevStep,
@@ -17,7 +25,12 @@ const EconomicImpactForm = ({
 
   const updateEconomicImpact = useReportStore(
     (state) => state.updateEconomicImpact,
+    console.log(useReportStore((state) => state.economicImpact)),
   );
+
+  // Normalized versions (for PDF or submit)
+  const normalizedCostPerBeneficiary = normalizeNumber(costPerBeneficiary);
+  const normalizedRoi = normalizeNumber(roi);
 
   return (
     <>
@@ -68,12 +81,13 @@ const EconomicImpactForm = ({
               Cost Per Beneficiary
             </label>
             <input
-              type="text"
+              type="number"
               id="costPerBeneficiary"
               value={costPerBeneficiary}
-              onChange={(e) =>
-                updateEconomicImpact("costPerBeneficiary", e.target.value)
-              }
+              onChange={(e) => {
+                const v = e.target.value;
+                updateEconomicImpact("costPerBeneficiary", v === "" ? "" : v);
+              }}
               className="inputClass"
               placeholder="Enter amount"
             />
@@ -83,10 +97,13 @@ const EconomicImpactForm = ({
               Return on Investment (%)
             </label>
             <input
-              type="text"
+              type="number"
               id="roi"
               value={roi}
-              onChange={(e) => updateEconomicImpact("roi", e.target.value)}
+              onChange={(e) => {
+                const v = e.target.value;
+                updateEconomicImpact("roi", v === "" ? "" : v);
+              }}
               className="inputClass"
               placeholder="Enter ROI %"
             />

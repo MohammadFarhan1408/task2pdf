@@ -88,8 +88,8 @@ export const useReportStore = create((set) => ({
   economicImpact: {
     employabilityEnhancement: "",
     incomeOpportunities: "",
-    costPerBeneficiary: 0,
-    roi: 0,
+    costPerBeneficiary: "",
+    roi: "",
   },
 
   innovationImpact: {

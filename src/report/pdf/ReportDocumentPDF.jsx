@@ -27,12 +27,15 @@ import { SustainabilityPage } from "./pages/SustainabilityPage/SustainabilityPag
 
 const isEmptyText = (text) => !text || text.trim() === "";
 
+const isEmptyNumber = (n) =>
+  n === "" || n === null || n === undefined || Number.isNaN(n);
+
 const isEconomicImpactEmpty = (e) => {
   return (
     isEmptyText(e.employabilityEnhancement) &&
     isEmptyText(e.incomeOpportunities) &&
-    e.costPerBeneficiary === 0 &&
-    e.roi === 0
+    isEmptyNumber(e.costPerBeneficiary) &&
+    isEmptyNumber(e.roi)
   );
 };
 
