@@ -22,7 +22,7 @@ export const ProjectPage = () => {
     date ? new Date(date).toLocaleDateString("en-GB") : "—";
 
   return (
-    <Page size="A4" style={styles.page}>
+    <Page size="A4" style={styles.page} id="project-overview">
       <PDFHeader title="Project Overview" />
 
       <View style={styles.container}>

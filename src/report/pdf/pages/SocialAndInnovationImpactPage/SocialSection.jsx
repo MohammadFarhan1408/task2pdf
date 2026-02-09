@@ -14,7 +14,7 @@ const SocialSection = () => {
   } = socialImpact;
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} id="social-impact">
       <View style={styles.impactSection}>
         <View style={styles.headerContainer}>
           <View style={[styles.circle, { backgroundColor: "#8b5cf6" }]} />

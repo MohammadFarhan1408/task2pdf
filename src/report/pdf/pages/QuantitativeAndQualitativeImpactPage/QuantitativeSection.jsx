@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View } from "@react-pdf/renderer";
-import { styles } from "./qualitativeStyle";
+import { styles } from "./quantitativeStyle";
 import { useReportStore } from "@/store/reportStore";
 
 const QualitativeSection = () => {
@@ -13,7 +13,7 @@ const QualitativeSection = () => {
   } = useReportStore((state) => state.qualitativeImpact || {});
 
   return (
-    <>
+    <View id="quantitative-impact">
       <View style={styles.grid}>
         <View style={styles.row}>
           <View style={styles.card}>
@@ -56,7 +56,7 @@ const QualitativeSection = () => {
         <Text style={styles.summaryTitle}>Feedback</Text>
         <Text style={styles.summaryText}>{testimonials}</Text>
       </View>
-    </>
+    </View>
   );
 };
 

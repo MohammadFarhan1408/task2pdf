@@ -9,7 +9,7 @@ const BaselineEndlineSection = () => {
   );
 
   return (
-    <>
+    <View id="baseline">
       <Text style={styles.introText}>
         The following comparison highlights the measurable progress achieved
         during the project intervention.
@@ -75,7 +75,7 @@ const BaselineEndlineSection = () => {
           A positive percentage change indicates improvement post-intervention.
         </Text>
       </View>
-    </>
+    </View>
   );
 };
 

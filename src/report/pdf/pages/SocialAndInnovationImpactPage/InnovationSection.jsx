@@ -9,7 +9,7 @@ const InnovationSection = () => {
   );
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} id="innovation-impact">
       <View style={styles.techSection}>
         <View style={styles.sectionHeader}>
           <Text style={styles.sectionTitle}>NEW TECHNOLOGIES ADOPTED</Text>

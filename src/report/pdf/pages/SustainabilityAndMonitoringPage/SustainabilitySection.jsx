@@ -8,7 +8,7 @@ const SustainabilitySection = () => {
     useReportStore((state) => state.sustainability || {});
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} id="sustainability">
       <View style={styles.sectionCard}>
         <View style={styles.headerRow}>
           <View

@@ -17,7 +17,7 @@ export const ObjectivesPage = () => {
   } = objectives;
 
   return (
-    <Page size="A4" style={styles.page}>
+    <Page size="A4" style={styles.page} id="objectives">
       <PDFHeader title="Objectives & Intended Outcomes" />
 
       <View style={styles.container}>

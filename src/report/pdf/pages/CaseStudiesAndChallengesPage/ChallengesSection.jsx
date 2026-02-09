@@ -8,7 +8,7 @@ const ChallengesSection = () => {
     useReportStore((state) => state.challengesAndLearnings || {});
 
   return (
-    <View style={styles.contentContainer}>
+    <View style={styles.contentContainer} id="challenges-learning">
       <View style={styles.sectionBox}>
         <View style={[styles.accentBar, { backgroundColor: "#ef4444" }]} />
         <Text style={styles.sectionLabel}>KEY CHALLENGES</Text>

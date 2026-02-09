@@ -12,7 +12,7 @@ const LearningSection = () => {
   } = useReportStore((state) => state.learningOutcomes || {});
 
   return (
-    <>
+    <View id="learning-and-skill">
       <View style={styles.mainGrid}>
         <View style={[styles.skillsRow, { alignItems: "stretch" }]}>
           <View style={[styles.heroMetric, { flex: 1 }]}>
@@ -65,7 +65,7 @@ const LearningSection = () => {
           </View>
         </View> */}
       </View>
-    </>
+    </View>
   );
 };
 

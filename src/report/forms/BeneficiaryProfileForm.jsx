@@ -92,15 +92,8 @@ const BeneficiaryProfileForm = ({
                     `${from || ""}-${to || ""}`,
                   );
                 }}
-                onBlur={() => {
-                  const from = ageGroup?.split("-")[0];
-                  const to = ageGroup?.split("-")[1];
-
-                  if (from && to && Number(from) > Number(to)) {
-                    alert("From must be less than To");
-                    updateBeneficiaryProfile("ageGroup", `-${to || ""}`);
-                  }
-                }}
+                min={0}
+                max={ageGroup?.split("-")[1]}
               />
               <input
                 type="number"
@@ -116,14 +109,8 @@ const BeneficiaryProfileForm = ({
                     `${from || ""}-${to || ""}`,
                   );
                 }}
-                onBlur={() => {
-                  const from = ageGroup?.split("-")[0];
-                  const to = ageGroup?.split("-")[1];
-                  if (from && to && Number(to) < Number(from)) {
-                    alert("To must be greater than From");
-                    updateBeneficiaryProfile("ageGroup", `${from || ""}-`);
-                  }
-                }}
+                min={parseInt(ageGroup?.split("-")[0]) + 1}
+                max={100}
               />
             </div>
           </div>

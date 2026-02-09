@@ -26,6 +26,7 @@ export const styles = StyleSheet.create({
     color: "#1e293b",
     textTransform: "uppercase",
     letterSpacing: 0.5,
+    textDecoration: "none",
   },
   dotLeader: {
     flexGrow: 1,

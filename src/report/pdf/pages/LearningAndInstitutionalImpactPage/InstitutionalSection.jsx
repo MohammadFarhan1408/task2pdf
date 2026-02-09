@@ -12,7 +12,7 @@ const InstitutionalSection = () => {
   } = useReportStore((state) => state.institutionalImpact || {});
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} id="institutional-impact">
       <View style={styles.impactCard}>
         <Text style={styles.cardHeader}>
           CAPACITY BUILDING OF TEACHERS/STAFF

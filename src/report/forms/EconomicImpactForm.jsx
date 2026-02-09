@@ -25,7 +25,6 @@ const EconomicImpactForm = ({
 
   const updateEconomicImpact = useReportStore(
     (state) => state.updateEconomicImpact,
-    console.log(useReportStore((state) => state.economicImpact)),
   );
 
   // Normalized versions (for PDF or submit)

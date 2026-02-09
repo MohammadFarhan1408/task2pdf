@@ -6,7 +6,7 @@ import HaitianLogo from "@/assets/images/Haitian-Logo.jpg";
 import { useReportStore } from "@/store/reportStore";
 
 export const CoverPage = () => {
-  const projectTitle = useReportStore((state) => state.projectTitle);
+  const { projectTitle } = useReportStore((state) => state.projectOverview);
 
   return (
     <Page size="A4" style={styles.page}>

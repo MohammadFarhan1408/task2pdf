@@ -40,7 +40,7 @@ const BeneficiarySection = () => {
   } = useReportStore((state) => state.beneficiaryProfile || {});
 
   return (
-    <>
+    <View id="beneficiary">
       <View style={styles.statsRow}>
         <View style={styles.mainStatBox}>
           <Text style={styles.statLabel}>TOTAL BENEFICIARIES</Text>
@@ -91,7 +91,7 @@ const BeneficiarySection = () => {
           </View>
         </View>
       </View>
-    </>
+    </View>
   );
 };
 

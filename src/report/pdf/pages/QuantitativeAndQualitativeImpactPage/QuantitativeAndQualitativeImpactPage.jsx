@@ -4,7 +4,7 @@ import PDFFooter from "../../components/PDFFooter";
 import PDFHeader from "../../components/PDFHeader";
 import QualitativeSection from "./QualitativeSection";
 import QuantitativeSection from "./QuantitativeSection";
-import { styles as qualitativeStyles } from "./qualitativeStyle";
+import { styles as qualitativeStyles } from "./quantitativeStyle";
 
 export const QuantitativeAndQualitativeImpactPage = () => {
   return (

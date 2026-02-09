@@ -8,78 +8,84 @@ export const styles = StyleSheet.create({
     fontFamily: "Helvetica",
     backgroundColor: "#FFFFFF",
   },
-  introBox: {
-    marginBottom: 20,
-    padding: 12,
-    backgroundColor: "#f8fafc",
-    borderLeft: "3pt solid #cbd5e1",
-  },
-  introText: {
-    fontSize: 10,
-    color: "#475569",
-    lineHeight: 1.5,
-    fontFamily: "Helvetica-Oblique",
-  },
-  grid: {
+  container: {
+    marginTop: 10,
     flexDirection: "column",
-    gap: 15,
+    gap: 25,
   },
-  row: {
+  heroRow: {
     flexDirection: "row",
     gap: 15,
   },
-  card: {
+  heroBox: {
     flex: 1,
-    padding: 15,
-    border: "1pt solid #f1f5f9",
+    padding: 20,
     borderRadius: 8,
-    backgroundColor: "#ffffff",
-    position: "relative",
+    backgroundColor: "#f8fafc",
+    border: "1pt solid #e2e8f0",
+    alignItems: "center",
   },
-  indicator: {
-    width: 20,
-    height: 3,
-    borderRadius: 2,
-    marginBottom: 8,
-  },
-  cardLabel: {
-    fontSize: 8,
+  heroLabel: {
+    fontSize: 9,
     fontFamily: "Helvetica-Bold",
     color: "#64748b",
     letterSpacing: 1,
+    marginBottom: 8,
+  },
+  heroValue: {
+    fontSize: 28,
+    fontFamily: "Helvetica-Bold",
+    color: "#1e293b",
+  },
+  progressSection: {
+    padding: 20,
+    borderRadius: 8,
+    backgroundColor: "#ffffff",
+    border: "1pt solid #f1f5f9",
+  },
+  sectionTitle: {
+    fontSize: 10,
+    fontFamily: "Helvetica-Bold",
+    color: "#1e293b",
+    marginBottom: 20,
+    textTransform: "uppercase",
+    letterSpacing: 0.5,
+  },
+  metricItem: {
+    marginBottom: 18,
+  },
+  metricHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
     marginBottom: 6,
   },
-  cardBody: {
+  metricName: {
     fontSize: 10,
-    lineHeight: 1.5,
-    color: "#334155",
-    textAlign: "justify",
+    color: "#475569",
+    fontFamily: "Helvetica-Bold",
   },
-  observationNote: {
-    marginTop: "auto",
-    paddingTop: 10,
-    borderTop: "1pt solid #f1f5f9",
+  metricPercent: {
+    fontSize: 10,
+    fontFamily: "Helvetica-Bold",
+    color: "#1e293b",
+  },
+  progressBarBg: {
+    height: 8,
+    backgroundColor: "#f1f5f9",
+    borderRadius: 4,
+    overflow: "hidden",
+  },
+  progressBarFill: {
+    height: "100%",
+    borderRadius: 4,
+  },
+  footerNote: {
+    marginTop: 10,
   },
   noteText: {
     fontSize: 8,
     color: "#94a3b8",
     fontFamily: "Helvetica-Oblique",
-  },
-  summaryNote: {
-    marginTop: 25,
-    padding: 12,
-    backgroundColor: "#f9fafb",
-    borderLeft: "3pt solid #3b82f6",
-  },
-  summaryTitle: {
-    fontSize: 9,
-    fontFamily: "Helvetica-Bold",
-    color: "#1e293b",
-    marginBottom: 4,
-  },
-  summaryText: {
-    fontSize: 9,
-    color: "#64748b",
-    lineHeight: 1.4,
+    textAlign: "center",
   },
 });

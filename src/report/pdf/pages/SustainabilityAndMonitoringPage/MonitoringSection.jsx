@@ -9,7 +9,7 @@ const MonitoringSection = () => {
 
   return (
     <>
-      <View style={styles.methodologyGrid}>
+      <View style={styles.methodologyGrid} id="monitoring-evaluation">
         <View style={styles.methodCard}>
           <View style={styles.cardHeaderRow}>
             <View style={[styles.dot, { backgroundColor: "#3b82f6" }]} />

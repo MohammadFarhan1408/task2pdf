@@ -9,10 +9,6 @@ import BeneficiarySection from "./BeneficiarySection";
 import BaselineEndlineSection from "./BaselineEndlineSection";
 
 export const BeneficiaryAndBaselinePage = () => {
-  const baselineEndline = useReportStore(
-    (state) => state.baselineEndline || [],
-  );
-
   return (
     <Page size="A4" style={beneficiaryStyles.page}>
       <PDFHeader title="Beneficiary Profile" />
@@ -21,7 +17,7 @@ export const BeneficiaryAndBaselinePage = () => {
 
       <PDFHeader title="Baseline vs Endline" />
 
-      <BaselineEndlineSection data={baselineEndline} />
+      <BaselineEndlineSection />
 
       <PDFFooter />
     </Page>

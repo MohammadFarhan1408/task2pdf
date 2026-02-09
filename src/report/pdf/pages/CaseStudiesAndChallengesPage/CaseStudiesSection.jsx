@@ -12,7 +12,7 @@ const CaseStudiesSection = () => {
   } = useReportStore((state) => state.caseStudy || {});
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} id="case-studies">
       <View style={styles.storySection}>
         <View style={[styles.block, { marginBottom: 20 }]}>
           <Text style={styles.blockHeader}>BENEFICIARY BACKGROUND</Text>
