@@ -1,27 +1,24 @@
 import React from "react";
-import { Page, View } from "@react-pdf/renderer";
-import PDFFooter from "../../components/PDFFooter";
-import PDFHeader from "../../components/PDFHeader";
+import { View } from "@react-pdf/renderer";
 import SocialSection from "./SocialSection";
 import InnovationSection from "./InnovationSection";
-import { styles as socialStyles } from "./socialStyles";
+import SectionTitle from "../../components/SectionTitle";
+import PDFPageLayout from "../../components/PDFPageLayout";
 
 export const SocialAndInnovationImpactPage = () => {
   return (
-    <Page size="A4" style={socialStyles.page}>
+    <PDFPageLayout>
       <View id="social-impact">
-        <PDFHeader title="Social Impact" />
+        <SectionTitle title="Social Impact" />
         <SocialSection />
       </View>
 
       <View style={{ marginTop: 20 }} />
 
       <View id="innovation-impact">
-        <PDFHeader title="Innovation & Technology Impact" />
+        <SectionTitle title="Innovation & Technology Impact" />
         <InnovationSection />
       </View>
-
-      <PDFFooter />
-    </Page>
+    </PDFPageLayout>
   );
 };

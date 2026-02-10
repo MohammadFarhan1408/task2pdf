@@ -1,18 +1,11 @@
 import { StyleSheet } from "@react-pdf/renderer";
 
 export const styles = StyleSheet.create({
-  page: {
-    padding: 40,
-    fontFamily: "Helvetica",
-    display: "flex",
-    flexDirection: "column",
-    height: "100%",
-  },
   logoContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 80,
+    marginVertical: 80,
   },
   logoLeft: {
     width: 120,

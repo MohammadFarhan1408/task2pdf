@@ -1,27 +1,24 @@
 import React from "react";
-import { Page, View } from "@react-pdf/renderer";
-import PDFFooter from "../../components/PDFFooter";
-import PDFHeader from "../../components/PDFHeader";
+import { View } from "@react-pdf/renderer";
 import QualitativeSection from "./QualitativeSection";
 import QuantitativeSection from "./QuantitativeSection";
-import { styles as qualitativeStyles } from "./quantitativeStyle";
+import SectionTitle from "../../components/SectionTitle";
+import PDFPageLayout from "../../components/PDFPageLayout";
 
 export const QuantitativeAndQualitativeImpactPage = () => {
   return (
-    <Page size="A4" style={qualitativeStyles.page}>
+    <PDFPageLayout>
       <View id="qualitative-impact">
-        <PDFHeader title="Qualitative Impact & Behavioral Change" />
+        <SectionTitle title="Qualitative Impact & Behavioral Change" />
         <QualitativeSection />
       </View>
 
       <View style={{ marginTop: 20 }} />
 
       <View id="quantitative-impact">
-        <PDFHeader title="Quantitative Impact" />
+        <SectionTitle title="Quantitative Impact" />
         <QuantitativeSection />
       </View>
-
-      <PDFFooter />
-    </Page>
+    </PDFPageLayout>
   );
 };

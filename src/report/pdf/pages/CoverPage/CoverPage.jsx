@@ -4,16 +4,17 @@ import { styles } from "./styles";
 import STEMbotixLogo from "@/assets/images/STEMbotix-Logo.png";
 import HaitianLogo from "@/assets/images/Haitian-Logo.jpg";
 import { useReportStore } from "@/store/reportStore";
+import PDFPageLayout from "../../components/PDFPageLayout";
 
 export const CoverPage = () => {
   const { projectTitle } = useReportStore((state) => state.projectOverview);
 
   return (
-    <Page size="A4" style={styles.page}>
-      <View style={styles.logoContainer}>
+    <PDFPageLayout>
+      {/* <View style={styles.logoContainer}>
         <Image src={HaitianLogo} style={styles.logoLeft} />
         <Image src={STEMbotixLogo} style={styles.logoRight} />
-      </View>
+      </View> */}
 
       <View style={styles.mainBody}>
         <View style={styles.accentBar} />
@@ -29,7 +30,7 @@ export const CoverPage = () => {
         </View>
       </View>
 
-      <View style={styles.footerInfo}>
+      {/* <View style={styles.footerInfo}>
         <View style={styles.infoRow}>
           <Text style={styles.label}>Implementing Organization:</Text>
           <Text style={styles.value}>STEMbotix</Text>
@@ -42,9 +43,7 @@ export const CoverPage = () => {
           <Text style={styles.label}>Duration:</Text>
           <Text style={styles.value}>2025 - 2026</Text>
         </View>
-      </View>
-
-      <View style={styles.bottomBanner} />
-    </Page>
+      </View> */}
+    </PDFPageLayout>
   );
 };

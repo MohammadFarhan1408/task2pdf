@@ -1,13 +1,6 @@
 import { StyleSheet } from "@react-pdf/renderer";
 
 export const styles = StyleSheet.create({
-  page: {
-    paddingTop: 40,
-    paddingBottom: 60,
-    paddingHorizontal: 40,
-    fontFamily: "Helvetica",
-    backgroundColor: "#FFFFFF",
-  },
   tocContainer: {
     marginTop: 25,
     flexDirection: "column",

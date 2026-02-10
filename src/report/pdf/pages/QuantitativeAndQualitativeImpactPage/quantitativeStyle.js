@@ -22,15 +22,15 @@ export const styles = StyleSheet.create({
   },
   grid: {
     flexDirection: "column",
-    gap: 15,
+    gap: 10,
   },
   row: {
     flexDirection: "row",
-    gap: 15,
+    gap: 10,
   },
   card: {
     flex: 1,
-    padding: 15,
+    padding: 10,
     border: "1pt solid #f1f5f9",
     borderRadius: 8,
     backgroundColor: "#ffffff",
@@ -66,7 +66,7 @@ export const styles = StyleSheet.create({
     fontFamily: "Helvetica-Oblique",
   },
   summaryNote: {
-    marginTop: 25,
+    marginTop: 15,
     padding: 12,
     backgroundColor: "#f9fafb",
     borderLeft: "3pt solid #3b82f6",

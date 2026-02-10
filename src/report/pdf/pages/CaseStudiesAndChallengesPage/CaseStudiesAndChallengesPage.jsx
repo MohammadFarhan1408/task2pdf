@@ -1,27 +1,24 @@
 import React from "react";
-import { Page, View } from "@react-pdf/renderer";
+import { View } from "@react-pdf/renderer";
 import CaseStudiesSection from "./CaseStudiesSection";
 import ChallengesSection from "./ChallengesSection";
-import { styles as caseStudyStyles } from "./caseStudyStyles";
-import PDFHeader from "../../components/PDFHeader";
-import PDFFooter from "../../components/PDFFooter";
+import SectionTitle from "../../components/SectionTitle";
+import PDFPageLayout from "../../components/PDFPageLayout";
 
 export const CaseStudiesAndChallengesPage = () => {
   return (
-    <Page size="A4" style={caseStudyStyles.page}>
+    <PDFPageLayout>
       <View id="case-studies">
-        <PDFHeader title="Case Studies / Success Stories" />
+        <SectionTitle title="Case Studies / Success Stories" />
         <CaseStudiesSection />
       </View>
 
       <View style={{ marginTop: 20 }} />
 
       <View id="challenges-learning">
-        <PDFHeader title="Challenges & Learnings" />
+        <SectionTitle title="Challenges & Learnings" />
         <ChallengesSection />
       </View>
-
-      <PDFFooter />
-    </Page>
+    </PDFPageLayout>
   );
 };

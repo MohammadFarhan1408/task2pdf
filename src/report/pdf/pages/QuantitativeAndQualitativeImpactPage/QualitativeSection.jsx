@@ -64,7 +64,7 @@ const QuantitativeSection = () => {
           </View>
         </View>
 
-        <View style={styles.metricItem}>
+        <View style={[styles.metricItem, { marginBottom: 0 }]}>
           <View style={styles.metricHeader}>
             <Text style={styles.metricName}>
               Improvement in Assessment Scores

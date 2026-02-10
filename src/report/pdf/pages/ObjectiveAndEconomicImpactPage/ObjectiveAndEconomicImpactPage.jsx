@@ -1,10 +1,9 @@
 import React from "react";
-import { Page, View } from "@react-pdf/renderer";
-import PDFFooter from "../../components/PDFFooter";
-import PDFHeader from "../../components/PDFHeader";
-import { styles as objectiveStyle } from "./objectiveStyle";
+import { View } from "@react-pdf/renderer";
 import ObjectivesSection from "./ObjectivesSection";
 import EconomicSection from "./EconomicSection";
+import SectionTitle from "../../components/SectionTitle";
+import PDFPageLayout from "../../components/PDFPageLayout";
 
 const isEmptyText = (text) => !text || text.trim() === "";
 
@@ -24,9 +23,9 @@ export const ObjectiveAndEconomicImpactPage = ({ data }) => {
   const hideEconomic = isEconomicImpactEmpty(data.economicImpact);
 
   return (
-    <Page size="A4" style={objectiveStyle.page}>
+    <PDFPageLayout>
       <View id="objectives">
-        <PDFHeader title="Objectives & Intended Outcomes" />
+        <SectionTitle title="Objectives & Intended Outcomes" />
         <ObjectivesSection />
       </View>
 
@@ -34,12 +33,10 @@ export const ObjectiveAndEconomicImpactPage = ({ data }) => {
 
       {!hideEconomic && (
         <View id="economic-impact">
-          <PDFHeader title="Economic Impact" />
+          <SectionTitle title="Economic Impact" />
           <EconomicSection />
         </View>
       )}
-
-      <PDFFooter />
-    </Page>
+    </PDFPageLayout>
   );
 };

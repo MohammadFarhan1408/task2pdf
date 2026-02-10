@@ -4,6 +4,8 @@ import { styles } from "./styles";
 import PDFHeader from "../../components/PDFHeader";
 import PDFFooter from "../../components/PDFFooter";
 import { useReportStore } from "@/store/reportStore";
+import PDFPageLayout from "../../components/PDFPageLayout";
+import SectionTitle from "../../components/SectionTitle";
 
 export const TableOfContentsPage = () => {
   const economicImpact = useReportStore((state) => state.economicImpact);
@@ -95,10 +97,9 @@ export const TableOfContentsPage = () => {
   let INDEX_NUM = 1;
 
   return (
-    <Page size="A4" style={styles.page} id="table-content">
-      <PDFHeader title="Table of Contents" />
-
+    <PDFPageLayout>
       <View style={styles.tocContainer}>
+        <SectionTitle title={"Table of Contents"} />
         {pageBlocks.map((block, blockIndex) => {
           const pageNumber = START_PAGE + blockIndex;
 
@@ -121,8 +122,6 @@ export const TableOfContentsPage = () => {
           ));
         })}
       </View>
-
-      <PDFFooter />
-    </Page>
+    </PDFPageLayout>
   );
 };

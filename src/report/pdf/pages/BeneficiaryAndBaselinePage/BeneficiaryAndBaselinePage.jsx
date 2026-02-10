@@ -1,27 +1,22 @@
 import React from "react";
-import { Page, View } from "@react-pdf/renderer";
-import { useReportStore } from "@/store/reportStore";
-import PDFHeader from "../../components/PDFHeader";
-import PDFFooter from "../../components/PDFFooter";
-
-import { styles as beneficiaryStyles } from "./beneficiaryStyles";
+import { View } from "@react-pdf/renderer";
 import BeneficiarySection from "./BeneficiarySection";
 import BaselineEndlineSection from "./BaselineEndlineSection";
+import SectionTitle from "../../components/SectionTitle";
+import PDFPageLayout from "../../components/PDFPageLayout";
 
 export const BeneficiaryAndBaselinePage = () => {
   return (
-    <Page size="A4" style={beneficiaryStyles.page}>
+    <PDFPageLayout>
       <View id="beneficiary">
-        <PDFHeader title="Beneficiary Profile" />
+        <SectionTitle title="Beneficiary Profile" />
         <BeneficiarySection />
       </View>
 
       <View id="baseline">
-        <PDFHeader title="Baseline vs Endline" />
+        <SectionTitle title="Baseline vs Endline" />
         <BaselineEndlineSection />
       </View>
-
-      <PDFFooter />
-    </Page>
+    </PDFPageLayout>
   );
 };

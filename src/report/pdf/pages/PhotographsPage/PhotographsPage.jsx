@@ -1,9 +1,9 @@
 import React from "react";
-import { Page, Text, View, Image } from "@react-pdf/renderer";
+import { View, Image } from "@react-pdf/renderer";
 import { styles } from "./styles";
 import { useReportStore } from "@/store/reportStore";
-import PDFHeader from "../../components/PDFHeader";
-import PDFFooter from "../../components/PDFFooter";
+import SectionTitle from "../../components/SectionTitle";
+import PDFPageLayout from "../../components/PDFPageLayout";
 
 export const PhotographsPage = () => {
   const photographs = useReportStore((state) => state.photographs);
@@ -13,15 +13,15 @@ export const PhotographsPage = () => {
     : [];
 
   return (
-    <Page size="A4" style={styles.page} id="photographs">
-      <PDFHeader title={"Photographs"} />
-      <View style={styles.photoGrid}>
-        {images.slice(0, 8).map((img, i) => (
-          <Image key={i} src={img} style={styles.photo} />
-        ))}
+    <PDFPageLayout>
+      <View id="photographs">
+        <SectionTitle title={"Photographs"} />
+        <View style={styles.photoGrid}>
+          {images.slice(0, 8).map((img, i) => (
+            <Image key={i} src={img} style={styles.photo} />
+          ))}
+        </View>
       </View>
-
-      <PDFFooter />
-    </Page>
+    </PDFPageLayout>
   );
 };
