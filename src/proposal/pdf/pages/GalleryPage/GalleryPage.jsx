@@ -23,16 +23,15 @@ export const GalleryPage = () => {
       );
       setImages(loaded.map((m) => m.default));
     };
-
     loadImages();
   }, []);
 
-  const pages = chunk(images, 8); // 6 images per page
+  const pages = chunk(images, 39);
 
   return pages.map((pageImages, pageIndex) => (
     <PDFPageLayout key={pageIndex}>
-      <View>
-        <SectionTitle title={`Gallery`} />
+      <View id="gallery">
+        <SectionTitle title={`Gallery - Page ${pageIndex + 1}`} />
 
         <View style={styles.photoGrid}>
           {pageImages.map((img, i) => (

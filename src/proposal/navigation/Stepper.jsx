@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 // import ProposalDocumentPDF from "../pdf/ProposalDocumentPDF";
 import { useProposalStore } from "@/store/proposalStore";
-import ProposalForm from "../froms/ProposalForm";
-import FinancialForm from "../froms/FinancialForm";
-import GalleryForm from "../froms/GalleryForm";
-import ProjectProposalForm from "../froms/ProjectProposalForm";
+// import ProposalForm from "../froms/ProposalForm";
+// import FinancialForm from "../froms/FinancialForm";
+// import GalleryForm from "../froms/GalleryForm";
+// import ProjectProposalForm from "../froms/ProjectProposalForm";
 
-const ProposalDocumentPDF = React.lazy(
-  () => import("../pdf/ProposalDocumentPDF"),
-);
+const ProposalForm = lazy(() => import("../forms/ProposalForm"));
+const FinancialForm = lazy(() => import("../forms/FinancialForm"));
+const ProjectProposalForm = lazy(() => import("../forms/ProjectProposalForm"));
+// const GalleryForm = lazy(() => import("../forms/GalleryForm"));
+
+const ProposalDocumentPDF = lazy(() => import("../pdf/ProposalDocumentPDF"));
 
 const Stepper = () => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -50,14 +53,16 @@ const Stepper = () => {
         generatePDF={generatePDF}
       />
       <div className="flex justify-center items-center mt-6 w-full">
-        <PDFDownloadLink
-          id="pdf-download-btn"
-          document={<ProposalDocumentPDF data={proposalData} />}
-          fileName="Proposal-Data.pdf"
-          style={{ display: "none" }}
-        >
-          Download
-        </PDFDownloadLink>
+        <Suspense fallback={<div>Loading...</div>}>
+          <PDFDownloadLink
+            id="pdf-download-btn"
+            document={<ProposalDocumentPDF data={proposalData} />}
+            fileName="Proposal-Data.pdf"
+            style={{ display: "none" }}
+          >
+            Download
+          </PDFDownloadLink>
+        </Suspense>
       </div>
     </div>
   );

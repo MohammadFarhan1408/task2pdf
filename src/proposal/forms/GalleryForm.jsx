@@ -64,6 +64,7 @@ const GalleryForm = ({ prevStep, isLastStep, generatePDF }) => {
                   src={URL.createObjectURL(file)}
                   alt={`Gallery ${index + 1}`}
                   className="w-full h-32 object-cover"
+                  loading="lazy"
                 />
                 <button
                   type="button"
