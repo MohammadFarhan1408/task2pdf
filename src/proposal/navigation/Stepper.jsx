@@ -1,11 +1,6 @@
 import React, { lazy, Suspense, useState } from "react";
 import { PDFDownloadLink } from "@react-pdf/renderer";
-// import ProposalDocumentPDF from "../pdf/ProposalDocumentPDF";
 import { useProposalStore } from "@/store/proposalStore";
-// import ProposalForm from "../froms/ProposalForm";
-// import FinancialForm from "../froms/FinancialForm";
-// import GalleryForm from "../froms/GalleryForm";
-// import ProjectProposalForm from "../froms/ProjectProposalForm";
 
 const ProposalForm = lazy(() => import("../forms/ProposalForm"));
 const FinancialForm = lazy(() => import("../forms/FinancialForm"));

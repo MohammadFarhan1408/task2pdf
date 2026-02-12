@@ -1,24 +1,6 @@
 import React, { lazy, Suspense, useState } from "react";
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import { useReportStore } from "../../store/reportStore";
-// import ReportDocumentPDF from "../pdf/ReportDocumentPDF";
-
-// import ProjectForm from "../forms/ProjectForm";
-// import BaselineEndlineForm from "../forms/BaselineEndlineForm";
-// import BeneficiaryProfileForm from "../forms/BeneficiaryProfileForm";
-// import CaseStudyForm from "../forms/CaseStudyForm";
-// import ChallengesForm from "../forms/ChallengesForm";
-// import EconomicImpactForm from "../forms/EconomicImpactForm";
-// import InnovationImpactForm from "../forms/InnovationImpactForm";
-// import InstitutionalImpactForm from "../forms/InstitutionalImpactForm";
-// import LearningOutcomesForm from "../forms/LearningOutcomesForm";
-// import MonitoringEvaluationForm from "../forms/MonitoringEvaluationForm";
-// import ObjectivesForm from "../forms/ObjectivesForm";
-// import PhotographsForm from "../forms/PhotographsForm";
-// import QualitativeImpactForm from "../forms/QualitativeImpactForm";
-// import QuantitativeImpactForm from "../forms/QuantitativeImpactForm";
-// import SocialImpactForm from "../forms/SocialImpactForm";
-// import SustainabilityForm from "../forms/SustainabilityForm";
 
 const ProjectForm = lazy(() => import("../forms/ProjectForm"));
 const BaselineEndlineForm = lazy(() => import("../forms/BaselineEndlineForm"));
@@ -44,6 +26,9 @@ const ObjectivesForm = lazy(() => import("../forms/ObjectivesForm"));
 const PhotographsForm = lazy(() => import("../forms/PhotographsForm"));
 const QualitativeImpactForm = lazy(
   () => import("../forms/QualitativeImpactForm"),
+);
+const QuantitativeImpactForm = lazy(
+  () => import("../forms/QuantitativeImpactForm"),
 );
 const SocialImpactForm = lazy(() => import("../forms/SocialImpactForm"));
 const SustainabilityForm = lazy(() => import("../forms/SustainabilityForm"));

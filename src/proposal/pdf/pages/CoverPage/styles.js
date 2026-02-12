@@ -57,32 +57,4 @@ export const styles = StyleSheet.create({
     color: "#1e293b",
     fontWeight: "bold",
   },
-  footer: {
-    padding: 40,
-    borderTop: "1px solid #e2e8f0",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  ceoName: {
-    fontSize: 12,
-    fontWeight: "bold",
-    color: "#1e293b",
-  },
-  ceoTitle: {
-    fontSize: 10,
-    color: "#64748b",
-  },
-  descriptionText: {
-    fontSize: 11,
-    color: "#334155",
-    lineHeight: 1.4,
-  },
-
-  salutationText: {
-    fontSize: 12,
-    marginTop: 6,
-    color: "#1e293b",
-    fontWeight: "medium",
-  },
 });

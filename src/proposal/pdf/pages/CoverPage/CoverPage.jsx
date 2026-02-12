@@ -39,30 +39,7 @@ export const CoverPage = () => {
             <Text style={styles.label}>Date</Text>
             <Text style={styles.value}>{date || "-"}</Text>
           </View>
-
-          {/* OPTIONAL SHORT DESCRIPTION */}
-          {description ? (
-            <View style={styles.infoRow}>
-              <Text style={styles.label}>Overview</Text>
-              <Text style={styles.descriptionText}>{description}</Text>
-            </View>
-          ) : null}
         </View>
-
-        {/* FOOTER AUTHORITY */}
-        {/* <View style={styles.footer}>
-          <View>
-            <Text style={styles.ceoName}>Isha Bhagat</Text>
-            <Text style={styles.ceoTitle}>Chief Operational Officer (COO)</Text>
-            <Text style={styles.ceoTitle}>STEMbotix</Text>
-          </View>
-
-          <View>
-            <Text style={styles.ceoTitle}>Contact</Text>
-            <Text style={styles.ceoTitle}>+91 9726519892</Text>
-            <Text style={styles.ceoTitle}>isha@stembotix.com</Text>
-          </View>
-        </View> */}
       </View>
     </PDFPageLayout>
   );
