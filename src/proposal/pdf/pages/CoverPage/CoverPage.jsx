@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View } from "@react-pdf/renderer";
+import { Image, Text, View } from "@react-pdf/renderer";
 import { useProposalStore } from "@/store/proposalStore";
 import PDFPageLayout from "../../components/PDFPageLayout";
 import { styles } from "./styles";
