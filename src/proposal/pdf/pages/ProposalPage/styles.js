@@ -1,12 +1,4 @@
-export const backPageStyles = `
-<style>
-  .back-page__container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #ffffff;
-  }
+import { StyleSheet } from "@react-pdf/renderer";
 
 export const styles = StyleSheet.create({
   dateText: {
