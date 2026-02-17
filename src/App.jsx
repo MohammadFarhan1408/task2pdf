@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ProposalStepper from "./proposal/navigation/Stepper";
 import ReportStepper from "./report/navigation/Stepper";
 import DeliveryStepper from "./delivery/navigation/Stepper";
+import logo from "../assets/images/STEMbotix-Logo.png";
 
 const App = () => {
   const [mode, setMode] = useState(null); // "proposal" | "report" | null
@@ -14,7 +15,7 @@ const App = () => {
           <div className="">
             <div className="flex items-center justify-center">
               <img
-                src="/src/assets/images/STEMbotix-Logo.png"
+                src={logo}
                 alt="DocGen Logo"
                 className="w-40 md:h-15 md:w-auto mr-5"
               />
