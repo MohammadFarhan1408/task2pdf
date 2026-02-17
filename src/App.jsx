@@ -11,12 +11,19 @@ const App = () => {
       <div className="w-full max-w-5xl">
         {/* HEADER SECTION */}
         <div className="flex justify-between items-center mb-10">
-          <div>
-            <h1 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-              STEMbotix <span className="text-blue-600">DocGen</span>
-            </h1>
-            <p className="text-slate-500 text-sm mt-1">
-              Professional Document Automation System
+          <div className="">
+            <div className="flex items-center justify-center">
+              <img
+                src="/src/assets/images/STEMbotix-Logo.png"
+                alt="DocGen Logo"
+                className="w-40 md:h-15 md:w-auto mr-5"
+              />
+              <h1 className="text-xl md:text-3xl mt-2 font-extrabold  text-blue-600 tracking-tight">
+                PDF Generator
+              </h1>
+            </div>
+            <p className="text-slate-500 text-sm mt-2">
+              Create Proposals, Reports, and Certificates with ease.
             </p>
           </div>
 
