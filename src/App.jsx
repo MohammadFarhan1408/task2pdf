@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ProposalStepper from "./proposal/navigation/Stepper";
 import ReportStepper from "./report/navigation/Stepper";
 import DeliveryStepper from "./delivery/navigation/Stepper";
-import logo from "../assets/images/STEMbotix-Logo.png";
+import logo from "@/assets/images/STEMbotix-Logo.png";
 
 const App = () => {
   const [mode, setMode] = useState(null); // "proposal" | "report" | null
